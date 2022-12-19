@@ -1,0 +1,59 @@
+@import "./../../styles/variables";
+
+.header {
+  background: $dark;
+  width: 100%;
+  height: $headerHeight;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  @include breakpoint(md) {
+    padding: 0 3rem;
+  }
+  transition: 0.3s ease all;
+
+  &__content {
+    overflow: hidden;
+    color: $light;
+    margin: 0 auto;
+    max-width: 1920px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 100;
+
+    &__logo {
+      font-size: 2rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: $light;
+    }
+
+    button {
+      cursor: pointer;
+      outline: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: $borderRadius;
+      font-size: 1rem;
+      font-family: inherit;
+      background: $primary;
+      color: $dark;
+      border: 1px solid transparent;
+      transition: 0.3s ease all;
+
+      &:hover {
+        border-color: $primary;
+        background: rgba($primary, 0.1);
+        color: $primary;
+      }
+      &:active {
+        border-color: $primary;
+        background: linear-gradient(rgba($primary, 0.2), rgba($primary, 0.3));
+        color: $primary;
+      }
+    }
+  }
+}

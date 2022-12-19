@@ -1,0 +1,106 @@
+@import "../../styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+
+  .secondary {
+    font-family: $Rubik;
+  }
+
+  .tertiary {
+    font-family: $NotoSans;
+  }
+
+  &__img-group {
+    display: flex;
+    gap: 15px;
+    img {
+      height: 800px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: $borderRadius;
+    }
+
+    &__button--group {
+      width: 50%;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      .details{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+
+        span{
+          font-weight: bold;
+        }
+      }
+      button {
+        margin-top: 30px;
+        width: 200px;
+        cursor: pointer;
+        outline: none;
+        padding: 0.75rem 1.25rem;
+        border-radius: $borderRadius;
+        font-size: 1rem;
+        font-family: inherit;
+        background: $primary;
+        color: $dark;
+        border: 1px solid transparent;
+        transition: 0.3s ease all;
+
+        &:hover {
+          border-color: $primary;
+          background: rgba($primary, 0.1);
+          color: $primary;
+        }
+        &:active {
+          border-color: $primary;
+          background: linear-gradient(rgba($primary, 0.2), rgba($primary, 0.3));
+          color: $primary;
+        }
+
+        &.secondary {
+          background: $secondary;
+
+          &:hover {
+            border-color: $secondary;
+            background: rgba($secondary, 0.1);
+            color: $secondary;
+          }
+          &:active {
+            border-color: $secondary;
+            background: linear-gradient(rgba($secondary, 0.2), rgba($secondary, 0.3));
+            color: $secondary;
+          }
+        }
+
+        &.tertiary {
+          background: $tertiary;
+          color: $light;
+
+          &:hover {
+            border-color: $tertiary;
+            background: rgba($tertiary, 0.1);
+            color: $tertiary;
+          }
+          &:active {
+            border-color: $tertiary;
+            background: linear-gradient(rgba($tertiary, 0.2), rgba($tertiary, 0.3));
+            color: $tertiary;
+          }
+        }
+      }
+    }
+    &__additional_info {
+      padding: 10px;
+      span{
+        font-weight: bold;
+      }
+    }
+  }
+}

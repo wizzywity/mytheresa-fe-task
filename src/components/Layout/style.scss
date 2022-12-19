@@ -1,0 +1,7 @@
+@import "./../../styles/variables";
+
+.container {
+  min-height: calc(100vh - #{$headerHeight});
+  background: $bg;
+  padding: 20px;
+}
