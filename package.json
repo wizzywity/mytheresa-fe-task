@@ -2,7 +2,7 @@
   "name": "mytheresa-fe-task",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "src/index.jsx",
   "jest": {
     "moduleNameMapper": {
       "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
